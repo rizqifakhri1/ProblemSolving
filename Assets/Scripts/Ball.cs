@@ -5,9 +5,9 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     private Rigidbody2D rigidBody2D;
-    public float speed;
     private bool isPressed = false;
-    public float currentSpeed;
+    public float speed;
+    public float currentScore;
 
     void Start()
     {
@@ -31,7 +31,6 @@ public class Ball : MonoBehaviour
 
     private void Update()
     {
-        currentSpeed = rigidBody2D.velocity.magnitude;
         PushBall();
     }
 }
