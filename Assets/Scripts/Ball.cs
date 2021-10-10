@@ -9,51 +9,24 @@ public class Ball : MonoBehaviour
     private bool isPressed = false;
     public float currentSpeed;
 
+    // Start is called before the first frame update
     void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
     }
 
+    // Mengarahkan Bola kearah mouse berada
     private void PushBall()
     {
         if (isPressed) return;
 
-        var force = new Vector2(0f, 0f);
-        
-        // Arah bola bisa ditekan "W" bola atas
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetMouseButtonDown(0))
         {
-            var north = new Vector2(0f, 1f);
-            force = north;
             isPressed = true;
-        }
-
-        // Arah bola bisa ditekan "D" bola kanan
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            var east = new Vector2(1f, 0f);
-            force = east;
-            isPressed = true;
-        }
-
-        // Arah bola bisa ditekan "S" bola bawah
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            var south = new Vector2(0f, -1f);
-            force = south;
-            isPressed = true;
-        }
-
-        // Arah bola bisa ditekan ""A bola kiri
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            var west = new Vector2(-1f, 0f);
-            force = west;
-            isPressed = true;
-        }
-
-        if (isPressed)
-        {
+            Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var force = mouseWorld - transform.position;
+            force.z = 0;
+            //Rumusan untuk kecepatan bola
             rigidBody2D.velocity = force.normalized * speed;
         }
     }
