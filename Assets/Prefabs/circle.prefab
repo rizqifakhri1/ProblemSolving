@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2457481572602129036}
   - component: {fileID: 8898637900831040434}
-  - component: {fileID: 8096411092691887396}
-  - component: {fileID: 1783381068276511956}
+  - component: {fileID: 5758109633151621328}
+  - component: {fileID: 6893771888281709656}
   m_Layer: 0
-  m_Name: Square
+  m_Name: circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4063067512599857388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 80e7adaf8d8f3c943a391e4c8c36aa89, type: 3}
-  m_Color: {r: 0.94509804, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 16e1860096a57fd48a272d64af7533fe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8096411092691887396
+--- !u!114 &5758109633151621328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,12 +90,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4063067512599857388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db0a2ff8408d5e4eae46767b996a4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 33834581df9996b47a76728b88777a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   point: 1
---- !u!61 &1783381068276511956
-BoxCollider2D:
+--- !u!58 &6893771888281709656
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,15 +108,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28, y: 2.59}
-    newSize: {x: 0.28, y: 2.59}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28, y: 2.59}
-  m_EdgeRadius: 0
+  m_Radius: 0.25

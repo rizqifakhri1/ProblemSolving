@@ -9,12 +9,12 @@ public class Ball : MonoBehaviour
     public float speed;
     public float currentScore;
 
+    // Start is called before the first frame update
     void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Mengarahkan Bola kearah mouse berada
     private void PushBall()
     {
         if (isPressed) return;

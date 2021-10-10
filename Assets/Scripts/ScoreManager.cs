@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-//Script score manager
 public class ScoreManager : MonoBehaviour
 {
-    // Deklarasi Scoretext dan Player
     public Text scoreText;
     private Ball player;
 
